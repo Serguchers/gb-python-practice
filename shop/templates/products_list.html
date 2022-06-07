@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}
+Список продуктов
+{% endblock %}
+{% block body %}
+    <table>
+        <tr>
+            <th>Название</th>
+            <th>Дата поступления</th>
+            <th>Цена</th>
+            <th>Количество</th>
+            <th>Поставщик</th>
+        </tr>
+    {% for object in object_list %}
+        <tr>
+        <td>{{object.product_name}}</td>
+        <td>{{object.date_in}}</td>
+        <td>{{object.price}}</td>
+        <td>{{object.amount}}</td>
+        <td>{{object.supplier_name}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    <button>Добавить товар</button>
+{% endblock %}
