@@ -6,11 +6,11 @@
 {% block menu %}
     <div class='category-menu'>
     {% for category in categories %}
-        <p>{{ category }}</p>
+        <a href='/products/{{ category.pk }}'>{{ category }}</a>
     {% endfor %}
     </div>
 {% endblock %}
-{% block body %}
+{% block content %}
     <table>
         <tr>
             <th>Название</th>
@@ -18,6 +18,7 @@
             <th>Цена</th>
             <th>Количество</th>
             <th>Поставщик</th>
+            <th>Категории</th>
         </tr>
     {% for object in object_list %}
         <tr>
@@ -26,6 +27,11 @@
         <td>{{object.price}}</td>
         <td>{{object.amount}}</td>
         <td>{{object.supplier_name}}</td>
+        <td>
+            {% for category in object.category.all %}
+                {{category.name}}{% if not forloop.last %},{% endif %}
+            {% endfor %}
+        </td>
         </tr>
     {% endfor %}
     </table>

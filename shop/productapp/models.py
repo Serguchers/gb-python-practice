@@ -10,7 +10,7 @@ class ProductCategory(models.Model):
     
     
 class Product(models.Model):
-    category = models.ManyToManyField(ProductCategory, default='')
+    category = models.ManyToManyField(ProductCategory, default='', related_name='categories')
     product_name = models.CharField(max_length=128)
     date_in = models.DateField()
     price = models.IntegerField()
