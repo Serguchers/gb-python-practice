@@ -1,6 +1,14 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}
 Список продуктов
+{% endblock %}
+{% block menu %}
+    <div class='category-menu'>
+    {% for category in categories %}
+        <p>{{ category }}</p>
+    {% endfor %}
+    </div>
 {% endblock %}
 {% block body %}
     <table>
