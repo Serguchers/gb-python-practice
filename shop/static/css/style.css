@@ -1,3 +1,7 @@
+body {
+    width: 80%;
+    margin: auto;
+}
 /* внешние границы таблицы серого цвета толщиной 1px */
 table {
     border: 1px solid grey;
@@ -9,4 +13,8 @@ table {
  /* границы ячеек тела таблицы */
  td {
     border: 1px solid grey;
+ }
+ .category-menu {
+     display: flex;
+     justify-content: space-between;
  }
