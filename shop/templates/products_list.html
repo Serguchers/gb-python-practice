@@ -28,6 +28,11 @@
         <td>{{object.amount}}</td>
         <td>{{object.supplier_name}}</td>
         <td>
+            {% for site in object.site.all %}
+                {{site.name}}{% if not forloop.last %},{% endif %}
+            {% endfor %}
+        </td>
+        <td>
             {% for category in object.category.all %}
                 {{category.name}}{% if not forloop.last %},{% endif %}
             {% endfor %}
