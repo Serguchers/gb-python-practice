@@ -8,10 +8,10 @@ services:
     ports:
       - 54325:5432
     environment:
-      - POSTGRES_USER=sergei
-      - POSTGRES_PASSWORD=qwerty
-      - POSTGRES_DB=shop
-      - PGDATA="/var/lib/postgresql/data/pgdata"
+      POSTGRES_DB: shop
+      POSTGRES_USER: sergei
+      POSTGRES_PASSWORD: qwerty
+      PGDATA: "/var/lib/postgresql/data/pgdata"
     volumes:
       - .:/var/lib/postgresql/data
   
