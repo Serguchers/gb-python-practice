@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+Список продуктов
+</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body>
+    
+    <div class='category-menu'>
+    
+        <a href='/products/1'>Кресло</a>
+    
+        <a href='/products/2'>Видеокарта</a>
+    
+        <a href='/products/3'>Монитор</a>
+    
+        <a href='/products/4'>Коврик</a>
+    
+    </div>
+
+    
+    <table>
+        <tr>
+            <th>Название</th>
+            <th>Дата поступления</th>
+            <th>Цена</th>
+            <th>Количество</th>
+            <th>Поставщик</th>
+            <th>Категории</th>
+        </tr>
+    
+    </table>
+    <button>Добавить товар</button>
+
+</body>
+</html>
